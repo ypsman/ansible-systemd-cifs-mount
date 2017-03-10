@@ -18,6 +18,9 @@ for Example:
     systemctl start mount-point.mount
     systemctl stop mount-point.mount
 
+    systemctl status mount-point.automount
+    systemctl start mount-point.automount
+    systemctl stop mount-point.automount
 
 Options:
 --------
