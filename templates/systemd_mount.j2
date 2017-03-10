@@ -1,0 +1,12 @@
+[Unit]
+Description=mount {{ item }}
+After=network.target multi-user.target
+
+[Mount]
+What={{ cifs_mount_share }}/{{ item }}$
+Where={{ cifs_mount_path }}/{{ item }}
+Type=cifs
+Options={{ cifs_mount_options }}
+
+[Install]
+WantedBy=default.target

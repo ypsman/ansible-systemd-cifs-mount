@@ -1,0 +1,9 @@
+[Unit]
+Description=automount {{ item }}
+After=network.target multi-user.target
+
+[Automount]
+Where={{ cifs_mount_path }}/{{ item }}
+
+[Install]
+WantedBy=default.target
